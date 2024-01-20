@@ -22,7 +22,7 @@ export default class TictactoeModel {
         this.#kovjatekos= "O";
     }
     console.log(this.#aktjatekos)
-    console.log(this.#kovjatekos)
+    console.log("Következő játékos:" ,this.#kovjatekos)
     console.log(this.#list)
   }
 
