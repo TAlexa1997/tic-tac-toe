@@ -7,15 +7,14 @@ const Layout = () => {
         <header></header>
       </main>
 
-      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-            
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <Link class="nav-link active" href="#" to="/">Tic-Tac-Toe</Link>
+      <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div className="container-fluid">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link active"  to="/">Tic-Tac-Toe</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link active" href="#" to="/lighton">Light On</Link>
+            <li className="nav-item">
+              <Link className="nav-link active"  to="/lighton">Light On</Link>
             </li>
           </ul>
         </div>
