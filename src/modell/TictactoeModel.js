@@ -1,9 +1,9 @@
 export default class TictactoeModel {
   #list = [];
-  #aktjatekos = "X";
-#kovjatekos = "O";
+  #aktjatekos;
   constructor() {
-    this.#list = ["X", "O", "O", "X", "X", "O", " ", "O", "X"];
+    this.#aktjatekos = "X";
+    this.#list = Array(9).fill(" "); // 9 üres mező inicializálása
   }
   getList() {
     //listával úgy térünk vissza hogy új memóriterületbe másoljuk
@@ -12,19 +12,19 @@ export default class TictactoeModel {
   }
 
   setAllapot(id) {
-    this.#list[id]=this.#aktjatekos;
-
-    if(this.#aktjatekos==="X"){
-        this.#aktjatekos="O";
-        this.#kovjatekos= "X";
-    }else{
-        this.#aktjatekos ="X";
-        this.#kovjatekos= "O";
+    if (this.#list[id] === " ") {
+      this.#list[id] = this.#aktjatekos;
+      if (this.#aktjatekos === "X") {
+        this.#aktjatekos = "O";
+      } else {
+        this.#aktjatekos = "X";
+      }
+      console.log("Következő játékos:", this.#aktjatekos);
     }
-    console.log(this.#aktjatekos)
-    console.log("Következő játékos:" ,this.#kovjatekos)
-    console.log(this.#list)
+    console.log(this.#list);
   }
 
-  
+  getAktualisJatekos() {
+    return this.#aktjatekos;
+}
 }

@@ -1,6 +1,6 @@
 export default function Elem(props){
     function kattintas(){
-        console.log("Nono",props.index)
+        console.log("Index:",props.index)
         props.kattintas(props.index)
     }
     return(
